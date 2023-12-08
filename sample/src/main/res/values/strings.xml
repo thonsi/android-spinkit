@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">SpinKit</string>
+    <string name="style">Style</string>
+    <string name="widget">Widget</string>
+</resources>
