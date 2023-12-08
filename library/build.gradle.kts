@@ -31,7 +31,7 @@ afterEvaluate {
 
                 group = "com.github.l1068"
                 artifactId = "android-spinkit"
-                version = "1.0.2"
+                version = "1.0.3"
 
                 pom {
                     name.set("Android-SpinKit")
