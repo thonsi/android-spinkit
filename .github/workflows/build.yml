@@ -1,38 +1,40 @@
 name: Build
 
-on: [ push, pull_request ]
+on:
+  push:
+    branches: [ 'main' ]
 
 jobs:
-  build:
-    name: Build on ${{ matrix.os }}
-    runs-on: ${{ matrix.os }}
-    strategy:
-      fail-fast: false
-      matrix:
-        os: [ ubuntu-latest ]
-
+  linux:
+    name: Build
+    runs-on: ubuntu-latest
     steps:
-     - uses: actions/checkout@v4
-     - uses: actions/setup-java@v4
-       with:
-          distribution: 'zulu'
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
           java-version: 21
-     - uses: gradle/actions/setup-gradle@v4
      
-     - name: Build with Gradle
-       run: |
+      - name: Build with Gradle
+        run: |
           chmod +x gradlew
           ./gradlew :sample:assembleRelease
           ./gradlew publishToMavenLocal
-    
-     - name: Upload app
-       uses: actions/upload-artifact@v3
-       with:
-          name: ${{ matrix.os }}-app
-          path: sample/build/outputs
           
-     - name: Upload library
-       uses: actions/upload-artifact@v3
-       with:
-          name: ${{ matrix.os }}-library
+      - name: Upload app
+        uses: actions/upload-artifact@v4
+        with:
+          name: Spinkit-${{ github.sha }}
+          path: sample/build/outputs
+
+      - name: Upload library
+        if: ${{ always() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: library
           path: ~/.m2
+          compression-level: 9
+          include-hidden-files: true
