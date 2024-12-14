@@ -26,13 +26,13 @@ jobs:
           ./gradlew publishToMavenLocal
     
      - name: Upload app
-       uses: actions/upload-artifact@v3
+       uses: actions/upload-artifact@v4
        with:
           name: ${{ matrix.os }}-app
           path: sample/build/outputs
           
      - name: Upload library
-       uses: actions/upload-artifact@v3
+       uses: actions/upload-artifact@v4
        with:
           name: ${{ matrix.os }}-library
           path: ~/.m2
