@@ -1,0 +1,35 @@
+{
+  $schema: 'https://docs.renovatebot.com/renovate-schema.json',
+  extends: [
+    'config:recommended',
+  ],
+  labels: [
+    'dependencies',
+  ],
+  packageRules: [
+    {
+      groupName: 'Kotlin, KSP',
+      matchPackageNames: [
+        'com.google.devtools.ksp{/,}**',
+        '/org.jetbrains.kotlin.*/',
+      ],
+    },
+    {
+      groupName: 'AGP',
+      matchPackageNames: [
+        '/com.android.*/',
+      ],
+    },
+    {
+      description: 'Automatically merge minor and patch-level updates',
+      matchUpdateTypes: [
+        'minor',
+        'patch',
+        'digest',
+      ],
+      automerge: true,
+      automergeType: 'pr',
+      platformAutomerge: true,
+    },
+  ],
+}
