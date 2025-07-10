@@ -3,14 +3,14 @@ plugins {
 }
 
 android {
-    compileSdk = 35
-    buildToolsVersion = "35.0.0"
+    compileSdk = 36
+    buildToolsVersion = "36.0.0"
     namespace = "com.thonsi.android.loading"
 
     defaultConfig {
         applicationId = "com.thonsi.android.loading"
         minSdk = 21
-        targetSdk = 35
+        targetSdk = 36
         versionCode = 1
         versionName = "1.0"
     }
