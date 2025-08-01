@@ -39,7 +39,7 @@ publishing {
 
             groupId = "com.github.thonsi"
             artifactId = "android-spinkit"
-            version = "1.0.4"
+            version = "0.0.1"
 
             pom {
                 name.set("Android-SpinKit")
