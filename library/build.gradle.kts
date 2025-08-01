@@ -26,7 +26,7 @@ android {
 afterEvaluate {
     publishing {
         publications {
-           create<MavenPublication>("release") {
+            create<MavenPublication>("release") {
                 from(components["release"])
 
                 group = "com.github.thonsi"
@@ -34,24 +34,24 @@ afterEvaluate {
                 version = "1.0.4"
 
                 pom {
-                name.set("Android-SpinKit")
-                description.set("SpinKit for Android application")
-                url.set("https://github.com/thonsi/android-spinkit")
-                licenses {
-                    license {
-                        name.set("The Apache License, Version 2.0")
-                        url.set("https://www.apache.org/licenses/LICENSE-2.0.txt")
-                    }
-                }
-                developers {
-                    developer {
-                        name.set("thonsi")
-                    }
-                }
-                scm {
-                    connection.set("scm:git:https://github.com/thonsi/android-spinkit.git")
-                    developerConnection.set("scm:git:ssh://git@github.com/thonsi/android-spinkit.git")
+                    name.set("Android-SpinKit")
+                    description.set("SpinKit for Android application")
                     url.set("https://github.com/thonsi/android-spinkit")
+                    licenses {
+                        license {
+                            name.set("The Apache License, Version 2.0")
+                            url.set("https://www.apache.org/licenses/LICENSE-2.0.txt")
+                        }
+                    }
+                    developers {
+                        developer {
+                            name.set("thonsi")
+                        }
+                    }
+                    scm {
+                        connection.set("scm:git:https://github.com/thonsi/android-spinkit")
+                        url.set("https://github.com/thonsi/android-spinkit")
+                    }
                 }
             }
         }
