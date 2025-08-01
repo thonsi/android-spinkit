@@ -33,7 +33,9 @@ android {
 publishing {
     publications {
         create<MavenPublication>("release") {
-            from(components["release"])
+            afterEvaluate {
+                from(components["release"])
+            }
 
             groupId = "com.github.thonsi"
             artifactId = "android-spinkit"
