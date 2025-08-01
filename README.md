@@ -1,5 +1,7 @@
 # Android-SpinKit
 
+[![](https://jitpack.io/v/thonsi/android-spinkit.svg)](https://jitpack.io/#thonsi/android-spinkit)
+
 >Android loading animations(Fork of - [SpinKit](https://github.com/ybq/Android-SpinKit))
 
 ## Preview
