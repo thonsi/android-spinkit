@@ -27,8 +27,7 @@ jobs:
         shell: bash
         run: |
           chmod +x gradlew
-          ./gradlew assembleRelease
-          ./gradlew PublishToMavenLocal --stacktrace
+          ./gradlew assembleRelease PublishToMavenLocal --stacktrace
        
       - name: Upload app
         uses: actions/upload-artifact@v4
