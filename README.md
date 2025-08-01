@@ -36,7 +36,7 @@ dependencyResolutionManagement {
 
 ```gradle
 dependencies {
-      implementation 'com.github.l1068:Android-SpinKit:1.0.3'
+      implementation 'com.github.thonsi:Android-SpinKit:1.0.3'
 }
 ```
 
