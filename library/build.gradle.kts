@@ -21,13 +21,6 @@ android {
     lint {
         abortOnError = false
     }
-
-    publishing {
-        singleVariant("release") {
-            withSourcesJar()
-            withJavadocJar()
-        }
-    }
 }
 
 publishing {
