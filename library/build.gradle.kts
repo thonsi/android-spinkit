@@ -27,7 +27,7 @@ afterEvaluate {
     publishing {
         publications {
             create<MavenPublication>("release") {
-                from(components["release"])
+                from(components.findByName("release"))
 
                 group = "com.github.thonsi"
                 artifactId = "android-spinkit"
