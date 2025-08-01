@@ -36,11 +36,12 @@ dependencyResolutionManagement {
 
 2. Add the dependency
 
-```gradle
-dependencies {
-      implementation 'com.github.thonsi:Android-SpinKit:1.0.3'
-}
-```
+   For Java/Kotlin project:
+    ```groovy
+    dependencies {
+        implementation("com.github.thonsi:Android-SpinKit:$version")
+    }
+    ```
 
 ## Usage
 
