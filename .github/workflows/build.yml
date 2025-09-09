@@ -19,7 +19,7 @@ jobs:
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v4
         with:
-          cache-encryption-key: Da25KUVSE5jbGds2zXmfXw==
+          cache-read-only: true
      
       - name: Build with Gradle
         shell: bash
