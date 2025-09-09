@@ -1,4 +1,4 @@
-name: Build
+name: Android-Spinkit
 
 on: [ push, pull_request ]
 
