@@ -28,13 +28,13 @@ jobs:
           ./gradlew assembleRelease PublishToMavenLocal --stacktrace
        
       - name: Upload app
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: Spinkit-${{ github.sha }}
           path: sample/build/outputs
 
       - name: Upload Build Artifacts
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: 'release-artifacts'
           path: '~/.m2/repository/'
