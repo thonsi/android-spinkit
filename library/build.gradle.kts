@@ -10,7 +10,7 @@ android {
 
     defaultConfig {
         minSdk = 23
-        targetSdk = 36
+        targetSdkVersion = 36
     }
 
     compileOptions {
@@ -64,4 +64,3 @@ publishing {
         }
     }
 }
-
