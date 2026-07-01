@@ -9,7 +9,7 @@ android {
     namespace = "com.thonsi.android.spinkit"
 
     defaultConfig {
-        minSdk = 21
+        minSdk = 23
         targetSdk = 36
     }
 
