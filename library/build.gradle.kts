@@ -9,17 +9,13 @@ android {
     namespace = "com.thonsi.android.spinkit"
 
     defaultConfig {
-        minSdk = 23
-        targetSdkVersion = 37
+       minSdk = 24
+       targetSdk = 37
     }
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_21
         targetCompatibility = JavaVersion.VERSION_21
-    }
-
-    lint {
-        abortOnError = false
     }
 
     publishing {
