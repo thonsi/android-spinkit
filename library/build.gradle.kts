@@ -4,14 +4,10 @@ plugins {
 }
 
 android {
-    compileSdk = 37
-    buildToolsVersion = "37.0.0"
+
     namespace = "com.thonsi.android.spinkit"
 
-    defaultConfig {
-       minSdk = 24
-       targetSdk = 37
-    }
+    defaultConfig {}
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_21
