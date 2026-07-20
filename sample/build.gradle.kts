@@ -7,7 +7,7 @@ android {
 
     defaultConfig {
         applicationId = "com.thonsi.android.loading"
-        
+
         versionCode = 1
         versionName = "1.0"
     }
@@ -17,10 +17,17 @@ android {
     }
 
     buildTypes {
-        release {
+        getByName("debug") {
+            isMinifyEnabled = false
+            isShrinkResources = false
+        }
+        getByName("release") {
             isMinifyEnabled = true
             isShrinkResources = true
-            proguardFiles(getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro")
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
+            )
         }
     }
 
