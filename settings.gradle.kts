@@ -27,7 +27,7 @@ dependencyResolutionManagement {
 
 plugins {
     id("com.gradle.develocity") version "4.6.0"
-	id("com.android.settings") version "9.4.0"
+	id("com.android.settings") version "9.4.1"
 }
 
 develocity {
