@@ -4,5 +4,10 @@ plugins {
 }
 
 tasks.register<Delete>("clean") {
+    description = "Delete rootProject buildDirectory"
     delete(rootProject.layout.buildDirectory)
+
+    doLast {
+        println("🧹 Cleaned rootProject buildDirectory")
+    }
 }

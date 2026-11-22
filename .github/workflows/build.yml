@@ -24,7 +24,6 @@ jobs:
       - name: Build with Gradle
         shell: bash
         run: |
-          chmod +x gradlew
           ./gradlew assembleRelease PublishToMavenLocal --stacktrace
        
       - name: Upload app
